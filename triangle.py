@@ -4,6 +4,11 @@ from rectangle import Rectangle
 class Triangle(Rectangle):
     def __init__(self, base, height, side_a, side_b, side_c):
         super().__init__(width=base, height=height, name="triangle")
+        self.validate_positive(base, "Base")
+        self.validate_positive(height, "Height")
+        self.validate_positive(side_a, "Side_a")
+        self.validate_positive(side_b, "Side_b")
+        self.validate_positive(side_c, "Side_c")
         self.side_a = side_a
         self.side_b = side_b
         self.side_c = side_c

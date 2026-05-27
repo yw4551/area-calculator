@@ -5,6 +5,7 @@ import math
 class Hexagon(Shape):
     def __init__(self, side):
         super().__init__(name="hexagon")
+        self.validate_positive(side, "Side")
         self.side = side
 
     def get_area(self):

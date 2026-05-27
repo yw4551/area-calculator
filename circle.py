@@ -5,6 +5,7 @@ import math
 class Circle(Shape):
     def __init__(self, radius):
         super().__init__(name="circle")
+        self.validate_positive(radius, "Radius")
         self.radius = radius
 
     def get_area(self):
