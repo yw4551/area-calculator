@@ -4,6 +4,7 @@ import math
 
 class Circle(Shape):
     def __init__(self, radius):
+        super().__init__(name="circle")
         self.radius = radius
 
     def get_area(self):

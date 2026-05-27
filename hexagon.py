@@ -4,6 +4,7 @@ import math
 
 class Hexagon(Shape):
     def __init__(self, side):
+        super().__init__(name="hexagon")
         self.side = side
 
     def get_area(self):
@@ -11,7 +12,3 @@ class Hexagon(Shape):
 
     def get_perimeter(self):
         return self.side * 6
-
-
-h = Hexagon(5)
-print(h)
