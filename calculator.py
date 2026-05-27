@@ -5,7 +5,7 @@ class Shape:
     @staticmethod
     def validate_positive(value, name="Value"):
         if not isinstance(value, (int, float)) or isinstance(value, bool):
-            raise TabError(f"{name} must be a number")
+            raise TypeError(f"{name} must be a number")
 
         if value <= 0:
             raise ValueError(f"{name} must be a positive number")
@@ -20,4 +20,7 @@ class Shape:
         return f"Shape: {self.name}\nArea: {self.get_area()}\nPerimeter: {self.get_perimeter()}\n"
 
     def __repr__(self):
-        return f"{self.__dict__}\n"
+        attributes = ", ".join(
+            f"{k}={v}" for k, v in self.__dict__.items() if k != "name"
+        )
+        return f"{self.__class__.__name__}({attributes})"
