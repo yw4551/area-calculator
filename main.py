@@ -13,6 +13,5 @@ shapes = [
 ]
 
 for shape in shapes:
-    print(f"Shape: {shape.name}")
-    print(f"Area: {shape.get_area()}")
-    print(f"Perimeter: {shape.get_perimeter()}\n")
+    print(shape)
+    print(repr(shape))

@@ -17,4 +17,7 @@ class Shape:
         pass
 
     def __str__(self):
-        return f"This is a {self.name} with an area of {self.get_area()} and a perimeter of {self.get_perimeter()}"
+        return f"Shape: {self.name}\nArea: {self.get_area()}\nPerimeter: {self.get_perimeter()}\n"
+
+    def __repr__(self):
+        return f"{self.__dict__}\n"
